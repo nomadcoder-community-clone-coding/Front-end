@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import styled from "styled-components";
 import bell from '../img/bell-icon.png';
 import nomard from '../img/Nomardcorder-icon.png';
@@ -8,8 +9,22 @@ const Navigation = styled.div`
   display: flex;
   width: 100%;
   flex-direction: row;
-  align-content:flex-end;
+  background-color: white;
+`
+
+const Menu = styled.div`
+  display: flex;
+  flex: 1;
   justify-content:flex-start;
+  flex-direction: row;
+  background-color: white;
+`
+
+const Profile = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content:flex-end;
+  flex-direction: row;
   background-color: white;
 `
 
@@ -32,21 +47,22 @@ const Button2 = styled.button`
   background-color: white;
 `
 
-const printLog = () => {
-  console.log('Click!');
-}
 
 function Header() {
     return (
         <Navigation>
-          <Logo><img src={nomard} style={{width: "80px", height: "85px"}}/></Logo>
-          <Button1 onClick={printLog}>Course</Button1>
-          <Button1 onClick={printLog}>Challenges</Button1>
-          <Button1 onClick={printLog}>Community</Button1>
-          <Button1 onClick={printLog}>FAQ</Button1>
-          <Button1 onClick={printLog}>Roadmap</Button1>
-          <Button2 onClick={printLog}><img src={profile} style={{marginLeft: "680px"}} /></Button2>
-          <Button2 onClick={printLog}><img src={bell}/></Button2>
+          <Menu>
+            <Logo><img src={nomard} style={{width: "80px", height: "85px"}}/></Logo>
+            <Button1>Course</Button1>
+            <Button1>Challenges</Button1>
+            <Button1>Community</Button1>
+            <Button1>FAQ</Button1>
+            <Button1>Roadmap</Button1>
+          </Menu>
+          <Profile>
+            <Button2><img src={profile}/></Button2>
+            <Button2><img src={bell} style={{marginRight: '30px'}}/></Button2>
+          </Profile>
         </Navigation>
     );
   }
