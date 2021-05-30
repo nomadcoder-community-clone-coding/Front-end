@@ -4,11 +4,13 @@ import nomard from '../img/Nomardcorder-icon.png';
 import profile from '../img/profile-icon.png';
 
 const Navigation = styled.div`
+  position: fixed;
   display: flex;
   width: 100%;
   flex-direction: row;
   align-content:flex-end;
   justify-content:flex-start;
+  background-color: white;
 `
 
 const Logo = styled.image`
@@ -43,7 +45,7 @@ function Header() {
           <Button1 onClick={printLog}>Community</Button1>
           <Button1 onClick={printLog}>FAQ</Button1>
           <Button1 onClick={printLog}>Roadmap</Button1>
-          <Button2 onClick={printLog}><img src={profile} style={{marginLeft: "700px"}} /></Button2>
+          <Button2 onClick={printLog}><img src={profile} style={{marginLeft: "680px"}} /></Button2>
           <Button2 onClick={printLog}><img src={bell}/></Button2>
         </Navigation>
     );
