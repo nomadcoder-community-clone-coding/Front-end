@@ -14,7 +14,7 @@ export const Box = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1280px;
+    max-width: 1350px;
     justify-content: flex-start;
     margin: 0 auto;
 `
@@ -36,7 +36,20 @@ export const Column = styled.div`
     margin-left: 60px;
 `
 
+export const Heading = styled.p`
+    color: #9CA3AF;
+    font: semibold,
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing : 0.7px;
+    margin-bottom: 20px;
+    font-weight: bold;
+`
+
+
 export const FooterLink = styled.a`
+    font: semibold,
     font-size : 18 px;
     color: gray;
     margin-bottom: 15px;
@@ -48,18 +61,8 @@ export const FooterLink = styled.a`
 }
 `
 
-export const Heading = styled.p`
-    color: gray;
-    font: semibold,
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 20px;
-    letter-spacing : 0.7px;
-    margin-bottom: 20px;
-    font-weight: bold;
-`
-
 export const FooterContent1 = styled.p`
+    font: semibold;
     font-size: 12px;
     line-height: 10px;
     text-decoration: non solid rgb(107, 114, 128);
@@ -69,13 +72,14 @@ export const FooterContent1 = styled.p`
 `
 
 export const FooterContent2 = styled.p`
+    text-align : center;
     font-size: 1rem;
     color: gray;
     margin-bottom: 0px;
 `
 export const Bottom = styled.div`
     display: grid;
-    grid-template-columns : 10fr 30px 30px 30px 30px;
+    grid-template-columns : 30fr 1fr 1fr 1fr 1fr;
   
 `
 export const FooterLeft = styled.button`
@@ -92,6 +96,7 @@ export const FooterLeft = styled.button`
 `;
 
 export const FooterRight = styled.button`
+    font-size: 21px;
     background: white;
     color: gray;
     border: none;

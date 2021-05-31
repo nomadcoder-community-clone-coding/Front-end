@@ -42,6 +42,8 @@ const Footer = () => {
                     </Column>
                 </Row>
                 <p></p>
+                <hr width="1350px" color="EBEBEB"></hr>
+                <p></p>
                 <Bottom>
                     <FooterLeft>© 2017-2021 Nomad Coders. All rights reserved.</FooterLeft>
                     <FooterRight><FaInstagram /></FooterRight>
