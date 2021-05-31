@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../img/nomad_logo.png';
+import logo from '../img/nomad_mono.png';
 import { FaInstagram, FaYoutube, FaFacebookSquare, FaGithub } from 'react-icons/fa';
 import {
     Box, Container, Row, Column, FooterLink, FooterContent1, FooterContent2, Heading, Bottom, FooterLeft, FooterRight
