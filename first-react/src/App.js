@@ -1,16 +1,13 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import styled from 'styled-components';
-import PropTypes from "prop-types";
-import { FooterContainer } from './component/footer'
+import React from 'react'
+import Footer from './component/Footer'
 
 
 //import Header from './components/Header/Header.component';
-import './App.css';
 
 function App() {
 
   return (
-    <FooterContainer />
+    <Footer />
   )
 }
 
