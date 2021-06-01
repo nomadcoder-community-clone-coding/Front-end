@@ -14,7 +14,7 @@ export const Box = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1350px;
+    max-width: 1250px;
     justify-content: flex-start;
     margin: 0 auto;
 `
@@ -24,7 +24,7 @@ export const Row = styled.div`
     /*grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));*/
     grid-template-columns : 2fr 1fr 1fr 2.5fr;
     grid-gap: 3px;
-    @media (max-width: 1800px) {
+    @media (max-width: 1250px) {
     grid-template-columns: 320px 1fr 1fr 2fr;;
     }
 `
@@ -56,7 +56,7 @@ export const FooterLink = styled.a`
     text-decoration: none;
     min-width: 100px;
     &:hover {
-        color: #404040;
+        color: black;
         transition: 200ms ease-in;
 }
 `
