@@ -15,9 +15,15 @@ function MainBoard() {
             try {
                 console.log("try문 안에 들어왔다");
                 const response = await axios.get(
+<<<<<<< Updated upstream
                     'https://localhost:8080/category/3'
                 );
                 console.log(response.data);
+=======
+                    'https://localhost:8080/category/1'
+                );
+                console.log("데이터는 : " + response.data);
+>>>>>>> Stashed changes
                 setItemList(response.data);
                 setLoading(true);
             } catch (e) { // JSON이 로드되지 않은 경우
