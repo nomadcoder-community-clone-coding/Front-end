@@ -23,27 +23,23 @@ const Contents = styled.div`
 `
 
 const Card1 = styled.div`
-    background-color: #C4C4C4;
-    border-radius: 20px;
     display: flex;
     flex: 1;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     height:500px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-left: 70px;
 `
 
 const Card2 = styled.div`
     background-color: #C4C4C4;
-    border-radius: 20px;
     display: flex;
     flex: 3;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height:1000px;
-    margin: 30px;
+    margin: 30px 50px 30px;
 `
 
 
@@ -57,7 +53,8 @@ const Card3 = styled.div`
     align-items: center;
     flex-direction: column;
     height:40px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-right: 70px;
 `
 
 const WriteButton = styled.button`

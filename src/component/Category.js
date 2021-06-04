@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const Title = styled.div`
+  font-size: 17px;
+  padding-bottom: 20px;
+`
 
 function Category() {
   const [name, setNames] = useState(null);
@@ -31,13 +37,16 @@ function Category() {
   if (error) return <div>에러가 발생했습니다</div>;
   if (!name) return null;
   return (
-    <ul>
-      {name.map(user => (
-        <li key={user.id}>
-          {user.name}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <Title>카테고리</Title>
+      <div>
+        {name.map(user => (
+          <div key={user.id} style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
+            # {user.name}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
