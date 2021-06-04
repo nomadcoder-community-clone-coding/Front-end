@@ -38,7 +38,7 @@ export const Column = styled.div`
 
 export const Heading = styled.p`
     color: #9CA3AF;
-    font: semibold,
+    font: semibold;
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
@@ -49,7 +49,7 @@ export const Heading = styled.p`
 
 
 export const FooterLink = styled.a`
-    font: semibold,
+    font: semibold;
     font-size : 18 px;
     color: gray;
     margin-bottom: 15px;

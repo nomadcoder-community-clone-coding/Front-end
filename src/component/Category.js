@@ -15,18 +15,18 @@ const CategoryButton = styled.button`
   height: 25px;
   border: none;
   outline: none;
-  background-color: #3B82F6;
-  color: white;
+  background: transparent !important;
+  color: 'black';
 `
 
 function Category() {
   const [name, setNames] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const changeColor = () => {
-    
-  }
 
+  function changeButtonColor(e) {
+    console.log("잘 돌아감");
+  }
 
   useEffect(() => {
     const fetchNames = async () => {
@@ -37,7 +37,7 @@ function Category() {
         // loading 상태를 true 로 바꿉니다.
         setLoading(true);
         const response = await axios.get(
-          'http://localhost:8080/category'
+          'http://localhost:8080/category/'
         );
         setNames(response.data); // 데이터는 response.data 안에 들어있습니다.
       } catch (e) {
@@ -58,7 +58,10 @@ function Category() {
       <Title>카테고리</Title>
       <div>
         {name.map(user => (
-          <CategoryButton key={user.id} onClick={changeColor} style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
+          <CategoryButton 
+            key={user.id} 
+            onClick={changeButtonColor} 
+            style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
             <div style={{marginLeft: "12px"}}>
               # {user.name} 
             </div>

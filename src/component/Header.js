@@ -37,6 +37,7 @@ const Logo = styled.image`
 const Button1 = styled.button`
   margin-left: 27px;
   font-size: 15px;
+  color: gray;
   border: none;
   outline: none;
   background-color: white;
@@ -49,17 +50,20 @@ const Button2 = styled.button`
   background-color: white;
 `
 
-
 function Header() {
+
+  function changeTextColor(e) {
+    e.target.style.color = 'black';
+  }
     return (
         <Navigation>
           <Menu>
             <Logo><img src={nomard} style={{width: "80px", height: "85px"}}/></Logo>
-            <Button1>Course</Button1>
-            <Button1>Challenges</Button1>
-            <Button1>Community</Button1>
-            <Button1>FAQ</Button1>
-            <Button1>Roadmap</Button1>
+            <Button1 onClick={changeTextColor}>Course</Button1>
+            <Button1 onClick={changeTextColor}>Challenges</Button1>
+            <Button1 onClick={changeTextColor}>Community</Button1>
+            <Button1 onClick={changeTextColor}>FAQ</Button1>
+            <Button1 onClick={changeTextColor}>Roadmap</Button1>
           </Menu>
           <Profile>
             <Button2><img src={profile}/></Button2>
