@@ -30,7 +30,7 @@ const Card1 = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:350px;
+    height:500px;
     margin: 30px;
 `
 
@@ -42,7 +42,7 @@ const Card2 = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:350px;
+    height:1000px;
     margin: 30px;
 `
 
