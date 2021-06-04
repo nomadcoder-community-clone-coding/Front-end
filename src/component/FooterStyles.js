@@ -1,14 +1,13 @@
+
 import styled from 'styled-components';
 
 export const Box = styled.div`
-    position : absolute;
     padding: 64px 32px 64px 32px;
     bottom : 0;
     width: 100%;
-
     @media (max-width: 1960px){
         padding: 64px 32px;
-    }f
+    }
 `
 
 export const Container = styled.div`
