@@ -1,16 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
 const Title = styled.div`
   font-size: 17px;
   padding-bottom: 20px;
+  margin-left: 12px;
+`
+
+const CategoryButton = styled.button`
+  text-align: start;
+  border-radius: 9999px;
+  width: 100%;
+  height: 25px;
+  border: none;
+  outline: none;
+  background-color: #3B82F6;
+  color: white;
 `
 
 function Category() {
   const [name, setNames] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const changeColor = () => {
+    
+  }
+
 
   useEffect(() => {
     const fetchNames = async () => {
@@ -36,14 +52,17 @@ function Category() {
   if (loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다</div>;
   if (!name) return null;
+
   return (
     <div>
       <Title>카테고리</Title>
       <div>
         {name.map(user => (
-          <div key={user.id} style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
-            # {user.name}
-          </div>
+          <CategoryButton key={user.id} onClick={changeColor} style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
+            <div style={{marginLeft: "12px"}}>
+              # {user.name} 
+            </div>
+          </CategoryButton>
         ))}
       </div>
     </div>
