@@ -57,8 +57,9 @@ export const FooterLink = styled.a`
     min-width: 100px;
     &:hover {
         color: black;
+        cursor : pointer;
         transition: 200ms ease-in;
-}
+    }
 `
 
 export const FooterContent1 = styled.p`
@@ -101,4 +102,9 @@ export const FooterRight = styled.button`
     color: gray;
     border: none;
     outline: none;
+    &:hover {
+        color: black;
+        cursor : pointer;
+        transition: 200ms ease-in;
+    }
 `;
