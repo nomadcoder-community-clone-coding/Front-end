@@ -2,6 +2,43 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
+const Container = styled.div`
+    background-color: #F8F8F8;
+    border-radius: 7px;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:100px;
+    height:120px;
+    margin-bottom: 15px;
+`
+
+const Contents = styled.div`
+ display: flex;
+ flex-direction: row;
+`
+
+const LikeBox = styled.div`
+  background: transparent !important;
+  border: 1.5px solid #9B9F9D;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: 25px;
+  width:44px;
+  height:44px;
+`
+
+const CategoryButton = styled.button`
+  background: #6B7280;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+`
+
 
 function MainBoard() {
   const [name, setNames] = useState(null);
@@ -34,16 +71,22 @@ function MainBoard() {
   if (!name) return null;
   return (
     <div>
-      <p>카테고리</p>
       <div>
-        {name.map(user => (
-          <div 
-            key={user.id} 
-            style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
-            <div style={{marginLeft: "12px"}}>
-              # {user.title} 
-            </div>
-          </div>
+        {name.map(content => (
+          <Container 
+            key={content.id}>
+              <Contents>
+                <LikeBox>{content.likes}</LikeBox>
+                <div>
+                  <h3 style={{marginLeft: "30px"}}>
+                    {content.title}</h3>
+                  <p style={{marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
+                    <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
+                    &emsp; * {content.createdDate} &nbsp;* {content.commentNum}
+                  </p>
+                </div>
+              </Contents>
+          </Container>
         ))}
       </div>
     </div>

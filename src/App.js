@@ -33,14 +33,13 @@ const Card1 = styled.div`
 `
 
 const Card2 = styled.div`
-    background-color: #C4C4C4;
-    display: flex;
-    flex: 3;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height:1000px;
-    margin: 30px 50px 30px;
+  display: flex;
+  flex: 3;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height:1000px;
+  margin: 30px 50px 30px;
 `
 
 
