@@ -7,9 +7,11 @@ import profile from '../img/profile-icon.png';
 const Navigation = styled.div`
   position: fixed;
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-direction: row;
   background-color: white;
+  margin-top: 0px;
+  padding-top: 0px;
 `
 
 const Menu = styled.div`
