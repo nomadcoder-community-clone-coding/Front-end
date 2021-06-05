@@ -71,7 +71,7 @@ const Sorted = styled.div`
     display: flex;
     flex : 2;
     justify-content : flex-start;
-    
+    margin-bottom : 10px;
     font : semibold;
     font-size: 15px;
     color : gray;
