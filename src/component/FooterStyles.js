@@ -14,7 +14,7 @@ export const Box = styled.div`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 1250px;
+    /* max-width: 1250px; */
     justify-content: flex-start;
     margin: 0 auto;
 `
@@ -33,7 +33,7 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 60px;
+    margin-left: 20px;
 `
 
 export const Heading = styled.p`
