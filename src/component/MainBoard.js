@@ -15,7 +15,7 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     width:100%;
-    height:115px;
+    min-height:115px;
     margin-bottom: 15px;
 `
 
@@ -128,9 +128,9 @@ const DefaultItem = styled.button`
     background: transparent !important;
     border: none;
     outline: none;
-    &: hover {
+    &:hover {
         cursor : pointer;
-    }
+        }
 `
 
 const SelectedItem = styled.button`
@@ -140,7 +140,7 @@ const SelectedItem = styled.button`
     border: none;
     outline: none;
     color : #3B82F6;
-    &: hover {
+    &:hover {
         cursor : pointer;
       }
 `
