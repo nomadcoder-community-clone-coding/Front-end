@@ -2,6 +2,15 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import UpIcon from '../img/up-icon.png';
+import Arrow from '../img/Arrow.png';
+import Bubble from '../img/Bubble.png';
+
+const Board = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`
 
 const Container = styled.div`
     background-color: #F8F8F8;
@@ -56,6 +65,16 @@ const ProfilePhoto = styled.div`
   align-items: center;
   margin-right: 25px;
 `
+const NextButton = styled.button`
+    display: flex;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    align-items: center;
+    color: #3B82F6;
+    font-size: 18px;
+    margin-top: 50px;
+`
 
 
 function MainBoard() {
@@ -88,7 +107,7 @@ function MainBoard() {
     if (error) return <div>에러가 발생했습니다</div>;
     if (!name) return null;
     return (
-        <div>
+        <Board>
             <div>
                 {name.map(content => (
                     <Container
@@ -98,9 +117,10 @@ function MainBoard() {
                             <Details>
                                 <h3 style={{ marginLeft: "30px", marginBottom: "0px"}}>
                                     {content.title}</h3>
-                                <p style={{ marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
+                                <p style={{ marginLeft: "30px", fontSize: "16px", color: "#9E9E9E"}}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
-                    &emsp; * {content.createdDate} &nbsp;* {content.commentNum}
+                    &emsp; ·{content.createdDate}&nbsp;
+                    ·&nbsp;<img src={Bubble} style={{width: "15px", height: "15px"}}/>&nbsp;{content.commentNum}
                                 </p>
                             </Details>
                             <ProfilePhoto>
@@ -115,7 +135,10 @@ function MainBoard() {
                     </Container>
                 ))}
             </div>
-        </div>
+            <NextButton>Next Page&nbsp;
+                <img src={Arrow} style={{width: "15px", height: "15px"}}/>
+            </NextButton>
+        </Board>
     );
 }
 
