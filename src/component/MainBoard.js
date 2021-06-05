@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import UpIcon from '../img/up-icon.png';
 import CommentIcon from '../img/comment_icon.png';
 import Arrow from '../img/Arrow.png';
-import PopularIcon from '../img/popular_icon.png';
-import NewIcon from '../img/new_icon.png';
 
 const Container = styled.div`
     background-color: #F8F8F8;
@@ -115,35 +113,6 @@ const NextButton = styled.button`
         transition: 200ms ease-in;
         }
 `
-
-const Sorted = styled.div`
-    font : semibold;
-    font-size: 15px;
-    color : gray;
-`
-const DefaultItem = styled.button`
-    font : semibold;
-    font-size: 15px;
-    color: gray;
-    background: transparent !important;
-    border: none;
-    outline: none;
-    &: hover {
-        cursor : pointer;
-    }
-`
-
-const SelectedItem = styled.button`
-    font : semibold;
-    font-size: 15px;
-    background: transparent !important;
-    border: none;
-    outline: none;
-    color : #3B82F6;
-    &: hover {
-        cursor : pointer;
-      }
-`
 const Board = styled.div``
 
 function MainBoard() {
@@ -176,7 +145,6 @@ function MainBoard() {
     if (!name) return null;
     return (
         <Board>
-            <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem>&nbsp;<img src={NewIcon} /><SelectedItem>New</SelectedItem></Sorted>
             <div>
                 {name.map(content => (
                     <Container
