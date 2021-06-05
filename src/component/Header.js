@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 import bell from '../img/bell-icon.png';
 import nomard from '../img/Nomardcorder-icon.png';
@@ -41,6 +41,11 @@ const Button1 = styled.button`
   border: none;
   outline: none;
   background-color: white;
+  &:hover {
+    color: black;
+    cursor : pointer;
+    transition: 200ms ease-in;
+}
 `
 
 const Button2 = styled.button`
@@ -48,6 +53,9 @@ const Button2 = styled.button`
   border: none;
   outline: none;
   background-color: white;
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
 `
 
 function Header() {
@@ -55,22 +63,22 @@ function Header() {
   function changeTextColor(e) {
     e.target.style.color = 'black';
   }
-    return (
-        <Navigation>
-          <Menu>
-            <Logo><img src={nomard} style={{width: "80px", height: "85px"}}/></Logo>
-            <Button1 onClick={changeTextColor}>Course</Button1>
-            <Button1 onClick={changeTextColor}>Challenges</Button1>
-            <Button1 onClick={changeTextColor}>Community</Button1>
-            <Button1 onClick={changeTextColor}>FAQ</Button1>
-            <Button1 onClick={changeTextColor}>Roadmap</Button1>
-          </Menu>
-          <Profile>
-            <Button2><img src={profile}/></Button2>
-            <Button2><img src={bell} style={{marginRight: '30px'}}/></Button2>
-          </Profile>
-        </Navigation>
-    );
-  }
-  
-  export default Header;
+  return (
+    <Navigation>
+      <Menu>
+        <Logo><img src={nomard} style={{ width: "80px", height: "85px" }} /></Logo>
+        <Button1 onClick={changeTextColor}>Course</Button1>
+        <Button1 onClick={changeTextColor}>Challenges</Button1>
+        <Button1 onClick={changeTextColor}>Community</Button1>
+        <Button1 onClick={changeTextColor}>FAQ</Button1>
+        <Button1 onClick={changeTextColor}>Roadmap</Button1>
+      </Menu>
+      <Profile>
+        <Button2><img src={profile} /></Button2>
+        <Button2><img src={bell} style={{ marginRight: '30px' }} /></Button2>
+      </Profile>
+    </Navigation>
+  );
+}
+
+export default Header;
