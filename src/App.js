@@ -69,7 +69,7 @@ const WriteButton = styled.button`
   }
 `
 const Sorted = styled.div`
-    padding-top: 100px; 
+    padding-top: 100px;
     margin-left : 320px;
     font : semibold;
     font-size: 15px;

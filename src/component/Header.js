@@ -6,6 +6,7 @@ import profile from '../img/profile-icon.png';
 
 const Navigation = styled.div`
   position: fixed;
+  top:0;
   display: flex;
   width: 100vw;
   flex-direction: row;
@@ -46,7 +47,6 @@ const Button1 = styled.button`
     cursor : pointer;
     transition: 200ms ease-in;
   }
-}
 `
 
 const Button2 = styled.button`
@@ -61,19 +61,15 @@ const Button2 = styled.button`
 `
 
 function Header() {
-
-  function changeTextColor(e) {
-    e.target.style.color = 'black';
-  }
   return (
     <Navigation>
       <Menu>
         <Logo><img src={nomard} style={{ width: "80px", height: "85px" }} /></Logo>
-        <Button1 onClick={changeTextColor}>Course</Button1>
-        <Button1 onClick={changeTextColor}>Challenges</Button1>
-        <Button1 onClick={changeTextColor}>Community</Button1>
-        <Button1 onClick={changeTextColor}>FAQ</Button1>
-        <Button1 onClick={changeTextColor}>Roadmap</Button1>
+        <Button1>Course</Button1>
+        <Button1>Challenges</Button1>
+        <Button1 style={{color: "black"}}>Community</Button1>
+        <Button1>FAQ</Button1>
+        <Button1>Roadmap</Button1>
       </Menu>
       <Profile>
         <Button2><img src={profile} /></Button2>

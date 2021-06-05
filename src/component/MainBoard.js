@@ -13,7 +13,7 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
     width:100%;
-    height:115px;
+    min-height:115px;
     margin-bottom: 15px;
 `
 
@@ -99,12 +99,11 @@ const ProfilePhoto = styled.div`
 `
 const NextButton = styled.button`
     display: flex;
-    margin-left: 275px;
     align-items : center;
+    justify-content: center;
     background: transparent !important;
     border: none;
     outline: none;
-
     color: #3B82F6;
     font-size: 18px;
     margin-top: 50px;
@@ -113,7 +112,12 @@ const NextButton = styled.button`
         transition: 200ms ease-in;
         }
 `
-const Board = styled.div``
+const Board = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+`
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -172,13 +176,14 @@ function MainBoard() {
                         </Contents>
                     </Container>
                 ))}
-            </div>
-
-            <NextButton>Next Page&nbsp;
+                <NextButton>Next Page&nbsp;
                 <img src={Arrow} style={{ width: "15px", height: "15px" }} />
             </NextButton>
+            </Board>
 
-        </Board>
+
+
+        </div>
     );
 }
 
