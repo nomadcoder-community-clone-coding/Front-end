@@ -73,6 +73,7 @@ const Sorted = styled.div`
     flex-shrink: 0;
     flex-grow: 0;
     justify-content : flex-start;
+    align-items : center;
     margin-bottom : 10px;
     font : semibold;
     font-size: 15px;
@@ -81,6 +82,7 @@ const Sorted = styled.div`
 const DefaultItem = styled.button`
     display: flex;
     justify-content : flex-start;
+    align-items : center;
     font : semibold;
     font-size: 15px;
     color: gray;
@@ -93,6 +95,7 @@ const DefaultItem = styled.button`
 `
 const SelectedItem = styled.button`
     display: flex;
+    align-items : center;
     font : semibold;
     font-size: 15px;
     background: transparent !important;
@@ -107,6 +110,7 @@ const SelectedItem = styled.button`
 const Search = styled.button`
     display: flex;
     flex: 1;
+    align-items : center;
     margin-left : 400px;
     font : semibold;
     font-size: 15px;
@@ -133,7 +137,7 @@ function App() {
           <p></p><Category /></Card1>
         <Card2>
           <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem><img src={NewIcon} /><SelectedItem>New</SelectedItem>
-            <Search><img src={SearchIcon} /> &ensp;Search</Search>
+            <Search><img src={SearchIcon} />&ensp;Search</Search>
           </Sorted>
           <MainBoard />
         </Card2>

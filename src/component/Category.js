@@ -23,6 +23,10 @@ const Tag = styled.button`
   height: 40px;
   border: none;
   outline: none;
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
+}
 `
 
 function Category() {
