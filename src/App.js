@@ -82,7 +82,7 @@ const DefaultItem = styled.button`
     background: transparent !important;
     border: none;
     outline: none;
-    &: hover {
+    &:hover {
         cursor : pointer;
     }
 `
@@ -94,7 +94,7 @@ const SelectedItem = styled.button`
     border: none;
     outline: none;
     color : #3B82F6;
-    &: hover {
+    &:hover {
         cursor : pointer;
       }
 `
@@ -108,7 +108,7 @@ const Search = styled.button`
     border: none;
     outline: none;
     color : gray;
-    &: hover {
+    &:hover {
         cursor : pointer;
       }
 `
