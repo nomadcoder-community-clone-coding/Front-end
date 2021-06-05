@@ -178,12 +178,9 @@ function MainBoard() {
                 ))}
                 <NextButton>Next Page&nbsp;
                 <img src={Arrow} style={{ width: "15px", height: "15px" }} />
-            </NextButton>
-            </Board>
-
-
-
-        </div>
+                </NextButton>
+            </div>
+        </Board>
     );
 }
 

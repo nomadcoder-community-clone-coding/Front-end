@@ -6,7 +6,6 @@ const Title = styled.div`
   font-size: 17px;
   padding-bottom: 20px;
   margin-left: 12px;
-  margin-top: 40px;
 `
 
 const CategoryButton = styled.button`
@@ -59,12 +58,12 @@ function Category() {
       <Title>카테고리</Title>
       <div>
         {name.map(user => (
-          <CategoryButton 
-            key={user.id} 
-            onClick={changeButtonColor} 
-            style={{fontSize: "15px", marginTop: "10px", wordSpacing: "2px"}}>
-            <div style={{marginLeft: "12px"}}>
-              # {user.name} 
+          <CategoryButton
+            key={user.id}
+            onClick={changeButtonColor}
+            style={{ fontSize: "15px", marginTop: "10px", wordSpacing: "2px" }}>
+            <div style={{ marginLeft: "12px" }}>
+              # {user.name}
             </div>
           </CategoryButton>
         ))}
