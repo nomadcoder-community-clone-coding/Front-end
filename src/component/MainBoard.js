@@ -97,10 +97,12 @@ const ProfilePhoto = styled.div`
     transition: 200ms ease-in;
     }
 `
+
 const NextButton = styled.button`
     display: flex;
     align-items : center;
     justify-content: center;
+    margin-left : 290px;
     background: transparent !important;
     border: none;
     outline: none;
