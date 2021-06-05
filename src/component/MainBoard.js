@@ -9,8 +9,8 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:100px;
-    height:120px;
+    width:707px;
+    height:115px;
     margin-bottom: 15px;
 `
 
@@ -41,56 +41,56 @@ const CategoryButton = styled.button`
 
 
 function MainBoard() {
-  const [name, setNames] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+    const [name, setNames] = useState(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchNames = async () => {
-      try {
-        // 요청이 시작 할 때에는 error 와 users 를 초기화하고
-        setError(null);
-        setNames(null);
-        // loading 상태를 true 로 바꿉니다.
-        setLoading(true);
-        const response = await axios.get(
-          'http://localhost:8080/category/1'
-        );
-        setNames(response.data); // 데이터는 response.data 안에 들어있습니다.
-      } catch (e) {
-        setError(e);
-      }
-      setLoading(false);
-    };
+    useEffect(() => {
+        const fetchNames = async () => {
+            try {
+                // 요청이 시작 할 때에는 error 와 users 를 초기화하고
+                setError(null);
+                setNames(null);
+                // loading 상태를 true 로 바꿉니다.
+                setLoading(true);
+                const response = await axios.get(
+                    'http://localhost:8080/category/1'
+                );
+                setNames(response.data); // 데이터는 response.data 안에 들어있습니다.
+            } catch (e) {
+                setError(e);
+            }
+            setLoading(false);
+        };
 
-    fetchNames();
-  }, []);
+        fetchNames();
+    }, []);
 
-  if (loading) return <div>로딩중..</div>;
-  if (error) return <div>에러가 발생했습니다</div>;
-  if (!name) return null;
-  return (
-    <div>
-      <div>
-        {name.map(content => (
-          <Container 
-            key={content.id}>
-              <Contents>
-                <LikeBox>{content.likes}</LikeBox>
-                <div>
-                  <h3 style={{marginLeft: "30px"}}>
-                    {content.title}</h3>
-                  <p style={{marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
+    if (loading) return <div>로딩중..</div>;
+    if (error) return <div>에러가 발생했습니다</div>;
+    if (!name) return null;
+    return (
+        <div>
+            <div>
+                {name.map(content => (
+                    <Container
+                        key={content.id}>
+                        <Contents>
+                            <LikeBox>{content.likes}</LikeBox>
+                            <div>
+                                <h3 style={{ marginLeft: "30px" }}>
+                                    {content.title}</h3>
+                                <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
                     &emsp; * {content.createdDate} &nbsp;* {content.commentNum}
-                  </p>
-                </div>
-              </Contents>
-          </Container>
-        ))}
-      </div>
-    </div>
-  );
+                                </p>
+                            </div>
+                        </Contents>
+                    </Container>
+                ))}
+            </div>
+        </div>
+    );
 }
 
 export default MainBoard;
