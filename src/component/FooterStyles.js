@@ -80,7 +80,7 @@ export const FooterContent2 = styled.p`
 `
 export const Bottom = styled.div`
     display: grid;
-    grid-template-columns : 30fr 1fr 1fr 1fr 1fr;
+    grid-template-columns : 1050px 40px 40px 40px 40px;
   
 `
 export const FooterLeft = styled.button`
