@@ -3,7 +3,7 @@ import axios from 'axios';
 import styled from 'styled-components';
 import UpIcon from '../img/up-icon.png';
 import CommentIcon from '../img/comment_icon.png';
-
+import Arrow from '../img/Arrow.png';
 const Container = styled.div`
     background-color: #F8F8F8;
     border-radius: 7px;
@@ -98,14 +98,22 @@ const ProfilePhoto = styled.div`
 `
 const NextButton = styled.button`
     display: flex;
+    margin-left: 275px;
+    align-items : center;
     background: transparent !important;
     border: none;
     outline: none;
-    align-items: center;
+
     color: #3B82F6;
     font-size: 18px;
     margin-top: 50px;
+    &:hover {
+        cursor : pointer;
+        transition: 200ms ease-in;
+        }
 `
+
+const Board = styled.div``
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -165,9 +173,11 @@ function MainBoard() {
                     </Container>
                 ))}
             </div>
+
             <NextButton>Next Page&nbsp;
-                <img src={Arrow} style={{width: "15px", height: "15px"}}/>
+                <img src={Arrow} style={{ width: "15px", height: "15px" }} />
             </NextButton>
+
         </Board>
     );
 }
