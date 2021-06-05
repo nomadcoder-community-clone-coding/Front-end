@@ -11,7 +11,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:707px;
+    width:100%;
     height:115px;
     margin-bottom: 15px;
 `
@@ -19,18 +19,18 @@ const Container = styled.div`
 const Contents = styled.div`
  display: flex;
  flex-direction: row;
+ align-items: center;
 `
 
 const LikeBox = styled.div`
   background: transparent !important;
-  border: 1.5px solid #9B9F9D;
+  border: 2px solid #9B9F9D;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-left: 25px;
-  margin-top: 28px;
   width:44px;
   height:44px;
 `
@@ -98,9 +98,9 @@ function MainBoard() {
                         <Contents>
                             <LikeBox><img src={UpIcon} />{content.likes}</LikeBox>
                             <Details>
-                                <h3 style={{ marginLeft: "30px" }}>
+                                <h3 style={{ marginLeft: "30px", marginBottom: "0px"}}>
                                     {content.title}</h3>
-                                <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
+                                <p style={{ marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
                     &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon}></img> {content.commentNum}
                                 </p>
