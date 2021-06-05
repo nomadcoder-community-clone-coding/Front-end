@@ -74,6 +74,17 @@ const Writer = styled.button`
         }
 `
 
+const Comment = styled.button`
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background: #F8F8F8;
+    &:hover {
+        cursor : pointer;
+        transition: 200ms ease-in;
+        }
+`
+
 const ProfilePhoto = styled.div`
   display: flex;
   flex: 1;
@@ -85,8 +96,6 @@ const ProfilePhoto = styled.div`
     transition: 200ms ease-in;
     }
 `
-
-
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -110,7 +119,6 @@ function MainBoard() {
             }
             setLoading(false);
         };
-
         fetchNames();
     }, []);
 
@@ -130,7 +138,7 @@ function MainBoard() {
                                     {content.title}</DetailTitle>
                                 <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by <Writer>{content.writer}</Writer>
-                    &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon} />&nbsp;{content.commentNum}
+                    &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon} />&nbsp;<Comment>{content.commentNum}</Comment>
                                 </p>
                             </Details>
                             <ProfilePhoto>
