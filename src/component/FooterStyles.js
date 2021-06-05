@@ -5,9 +5,12 @@ export const Box = styled.div`
     padding: 64px 32px 64px 32px;
     bottom : 0;
     width: 100%;
+<<<<<<< Updated upstream
     @media (max-width: 1960px){
         padding: 64px 32px;
     }
+=======
+>>>>>>> Stashed changes
 `
 
 export const Container = styled.div`
@@ -77,13 +80,15 @@ export const FooterContent2 = styled.p`
     margin-bottom: 0px;
 `
 export const Bottom = styled.div`
-    display: grid;
-    grid-template-columns : 30fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    width: 100%;
+    /*grid-template-columns : 1400px 1fr 1fr 1fr 1fr;*/
   
 `
 export const FooterLeft = styled.button`
-    margin-left: 55px;
-    width: 500px;
+flex: 50;
+    margin-left: 20px;
+    width: 100%;
     font-size : 16px;
     line-height: 24px;
     text-decoration : non solid rgb(156, 163, 175);
@@ -95,6 +100,8 @@ export const FooterLeft = styled.button`
 `;
 
 export const FooterRight = styled.button`
+    flex: 1;
+    justify-content:flex-end;   
     font-size: 21px;
     background: white;
     color: gray;
