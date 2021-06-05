@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import UpIcon from '../img/up-icon.png';
 
 const Container = styled.div`
     background-color: #F8F8F8;
@@ -21,7 +22,7 @@ const Contents = styled.div`
 
 const LikeBox = styled.div`
   background: transparent !important;
-  border: 1.5px solid #9B9F9D;
+  border: 2px solid #9B9F9D;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -78,7 +79,7 @@ function MainBoard() {
                     <Container
                         key={content.id}>
                         <Contents>
-                            <LikeBox>{content.likes}</LikeBox>
+                            <LikeBox><img src={UpIcon} />{content.likes}</LikeBox>
                             <div>
                                 <h3 style={{ marginLeft: "30px" }}>
                                     {content.title}</h3>

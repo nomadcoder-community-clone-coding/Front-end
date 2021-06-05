@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from "styled-components";
 import bell from '../img/bell-icon.png';
 import nomard from '../img/Nomardcorder-icon.png';
@@ -45,6 +45,7 @@ const Button1 = styled.button`
     color: black;
     cursor : pointer;
     transition: 200ms ease-in;
+  }
 }
 `
 
@@ -56,6 +57,7 @@ const Button2 = styled.button`
   &:hover {
     cursor : pointer;
     transition: 200ms ease-in;
+  }
 `
 
 function Header() {
