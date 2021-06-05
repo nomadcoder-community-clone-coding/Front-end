@@ -42,7 +42,7 @@ const Footer = () => {
                     </Column>
                 </Row>
                 <p></p>
-                <hr width="1350px" color="EBEBEB"></hr>
+                <hr width="100%" color="EBEBEB"></hr>
                 <p></p>
                 <Bottom>
                     <FooterLeft>© 2017-2021 Nomad Coders. All rights reserved.</FooterLeft>

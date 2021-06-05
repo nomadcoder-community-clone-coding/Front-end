@@ -79,11 +79,14 @@ export const FooterContent2 = styled.p`
     margin-bottom: 0px;
 `
 export const Bottom = styled.div`
-    display: grid;
-    grid-template-columns : 1050px 40px 40px 40px 40px;
+    display: flex;
+    /*grid-template-columns : 1050px 40px 40px 40px 40px;*/
   
 `
 export const FooterLeft = styled.button`
+    display: flex;
+    flex: 1;
+    justify-content : flex-start;
     margin-left: 15px;
     width: 500px;
     font-size : 16px;
@@ -97,6 +100,9 @@ export const FooterLeft = styled.button`
 `;
 
 export const FooterRight = styled.button`
+    display: flex;
+    justify-content : flex-end;
+    margin-right : 30px;
     font-size: 21px;
     background: white;
     color: gray;

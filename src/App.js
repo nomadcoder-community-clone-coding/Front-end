@@ -69,7 +69,8 @@ const Card3 = styled.button`
 
 const Sorted = styled.div`
     display: flex;
-    flex : 2;
+    flex-shrink: 0;
+    flex-grow: 0;
     justify-content : flex-start;
     margin-bottom : 10px;
     font : semibold;
