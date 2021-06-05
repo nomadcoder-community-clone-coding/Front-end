@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import UpIcon from '../img/up-icon.png';
+import CommentIcon from '../img/comment_icon.png';
 
 const Container = styled.div`
     background-color: #F8F8F8;
@@ -41,6 +43,22 @@ const CategoryButton = styled.button`
   color: white;
 `
 
+const Details = styled.div`
+  display: flex;
+  flex: 5;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
+
+const ProfilePhoto = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content:flex-end;
+  align-items: center;
+  margin-right: 25px;
+`
+
+
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -78,15 +96,24 @@ function MainBoard() {
                     <Container
                         key={content.id}>
                         <Contents>
-                            <LikeBox>{content.likes}</LikeBox>
-                            <div>
+                            <LikeBox><img src={UpIcon} />{content.likes}</LikeBox>
+                            <Details>
                                 <h3 style={{ marginLeft: "30px" }}>
                                     {content.title}</h3>
                                 <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
-                    &emsp; * {content.createdDate} &nbsp;* {content.commentNum}
+                    &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon}></img> {content.commentNum}
                                 </p>
-                            </div>
+                            </Details>
+                            <ProfilePhoto>
+                                <img
+                                    src={content.writerPhoto}
+                                    style={{
+                                        borderRadius: "50%",
+                                        width: "60px",
+                                        height: "60px"
+                                    }} />
+                            </ProfilePhoto>
                         </Contents>
                     </Container>
                 ))}
