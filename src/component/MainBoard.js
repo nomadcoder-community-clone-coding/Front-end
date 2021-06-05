@@ -118,7 +118,31 @@ const NextButton = styled.button`
 
 const Sorted = styled.div`
     font : semibold;
+    font-size: 15px;
     color : gray;
+`
+const DefaultItem = styled.button`
+    font : semibold;
+    font-size: 15px;
+    color: gray;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    &: hover {
+        cursor : pointer;
+    }
+`
+
+const SelectedItem = styled.button`
+    font : semibold;
+    font-size: 15px;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color : #3B82F6;
+    &: hover {
+        cursor : pointer;
+      }
 `
 const Board = styled.div``
 
@@ -152,7 +176,7 @@ function MainBoard() {
     if (!name) return null;
     return (
         <Board>
-            <Sorted>Sort by:&emsp;<img src={PopularIcon} /> Popular&emsp;<img src={NewIcon} />New</Sorted>
+            <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem>&nbsp;<img src={NewIcon} /><SelectedItem>New</SelectedItem></Sorted>
             <div>
                 {name.map(content => (
                     <Container

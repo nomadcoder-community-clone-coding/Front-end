@@ -63,6 +63,9 @@ const WriteButton = styled.button`
   border: none;
   outline: none;
   background-color: #3B82F6;
+  &: hover {
+    cursor : pointer;
+  }
 `
 
 function App() {
