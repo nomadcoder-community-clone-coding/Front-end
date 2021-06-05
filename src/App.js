@@ -71,9 +71,69 @@ const WriteButton = styled.button`
   border: none;
   outline: none;
   background-color: #3B82F6;
+<<<<<<< Updated upstream
+=======
+  &:hover {
+    cursor : pointer;
+  }
+`
+const Sorted = styled.div`
+    display: flex;
+    flex : 3;
+    justify-content : flex-start;
+    align-items : center;
+    margin : auto;
+    padding-top: 100px;
+    font : semibold;
+    font-size: 15px;
+    color : gray;
+`
+const DefaultItem = styled.button`
+    display: flex;
+    font : semibold;
+    font-size: 15px;
+    color: gray;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    &:hover {
+        cursor : pointer;
+    }
+>>>>>>> Stashed changes
 `
 >>>>>>> Stashed changes
 
+<<<<<<< Updated upstream
+=======
+const SelectedItem = styled.button`
+    display: flex;
+    font : semibold;
+    font-size: 15px;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color : #3B82F6;
+    &:hover {
+        cursor : pointer;
+      }
+`
+
+const Search = styled.button`
+    display: flex;
+    justify-content : flex-end;
+    flex: 1;
+    /*margin-left : 320px;*/
+    font : semibold;
+    font-size: 15px;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color : gray;
+    &:hover {
+        cursor : pointer;
+      }
+`
+>>>>>>> Stashed changes
 function App() {
 
   return (
@@ -87,10 +147,18 @@ function App() {
         <Title>Community</Title>
         <SubTitle>개발자 99% 커뮤니티에서 수다 떨어요!</SubTitle>
       </div>
+<<<<<<< Updated upstream
       <Card4>sort by : </Card4>
+=======
+      <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem><img src={NewIcon} /><SelectedItem>New</SelectedItem>
+        <Search><img src={SearchIcon} /> &ensp;Search</Search>
+      </Sorted>
+>>>>>>> Stashed changes
       <Contents>
         <Card1><Category /></Card1>
-        <Card2><MainBoard /></Card2>
+        <Card2>
+          <MainBoard />
+        </Card2>
         <Card3><WriteButton>글쓰기</WriteButton></Card3>
       </Contents>
       <div>
