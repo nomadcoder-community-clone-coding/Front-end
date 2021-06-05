@@ -6,6 +6,7 @@ import profile from '../img/profile-icon.png';
 
 const Navigation = styled.div`
   position: fixed;
+  top:0;
   display: flex;
   width: 100vw;
   flex-direction: row;
