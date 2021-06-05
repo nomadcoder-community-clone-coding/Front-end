@@ -33,6 +33,10 @@ const Profile = styled.div`
 
 const Logo = styled.image`
   margin-left: 32px;
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
+  }
 `
 
 const Button1 = styled.button`
@@ -67,7 +71,7 @@ function Header() {
         <Logo><img src={nomard} style={{ width: "80px", height: "85px" }} /></Logo>
         <Button1>Course</Button1>
         <Button1>Challenges</Button1>
-        <Button1 style={{color: "black"}}>Community</Button1>
+        <Button1 style={{ color: "black" }}>Community</Button1>
         <Button1>FAQ</Button1>
         <Button1>Roadmap</Button1>
       </Menu>
