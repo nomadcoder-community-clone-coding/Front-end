@@ -28,6 +28,7 @@ const LikeBox = styled.div`
   align-items: center;
   flex-direction: column;
   margin-left: 25px;
+  margin-top: 28px;
   width:44px;
   height:44px;
 `
