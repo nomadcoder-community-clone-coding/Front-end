@@ -25,7 +25,6 @@ const Tag = styled.button`
   outline: none;
   &:hover {
     cursor : pointer;
-    transition: 200ms ease-in;
 }
 `
 
