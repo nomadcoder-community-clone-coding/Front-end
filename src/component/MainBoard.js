@@ -96,6 +96,16 @@ const ProfilePhoto = styled.div`
     transition: 200ms ease-in;
     }
 `
+const NextButton = styled.button`
+    display: flex;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    align-items: center;
+    color: #3B82F6;
+    font-size: 18px;
+    margin-top: 50px;
+`
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -126,7 +136,7 @@ function MainBoard() {
     if (error) return <div>에러가 발생했습니다</div>;
     if (!name) return null;
     return (
-        <div>
+        <Board>
             <div>
                 {name.map(content => (
                     <Container
@@ -139,6 +149,7 @@ function MainBoard() {
                                 <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by <Writer>{content.writer}</Writer>
                     &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon} />&nbsp;<Comment>{content.commentNum}</Comment>
+
                                 </p>
                             </Details>
                             <ProfilePhoto>
@@ -154,7 +165,10 @@ function MainBoard() {
                     </Container>
                 ))}
             </div>
-        </div>
+            <NextButton>Next Page&nbsp;
+                <img src={Arrow} style={{width: "15px", height: "15px"}}/>
+            </NextButton>
+        </Board>
     );
 }
 
