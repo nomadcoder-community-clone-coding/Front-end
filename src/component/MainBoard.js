@@ -38,6 +38,7 @@ const CategoryButton = styled.button`
   border-radius: 2px;
   border: none;
   outline: none;
+  color: white;
 `
 
 
