@@ -6,6 +6,7 @@ const Title = styled.div`
   font-size: 17px;
   padding-bottom: 20px;
   margin-left: 12px;
+  margin-top: 40px;
 `
 
 const CategoryButton = styled.button`

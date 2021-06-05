@@ -101,12 +101,11 @@ const ProfilePhoto = styled.div`
 `
 const NextButton = styled.button`
     display: flex;
-    margin-left: 275px;
     align-items : center;
+    justify-content: center;
     background: transparent !important;
     border: none;
     outline: none;
-
     color: #3B82F6;
     font-size: 18px;
     margin-top: 50px;
@@ -120,6 +119,7 @@ const Sorted = styled.div`
     font : semibold;
     font-size: 15px;
     color : gray;
+    margin-bottom: 10px;
 `
 const DefaultItem = styled.button`
     font : semibold;
@@ -144,7 +144,12 @@ const SelectedItem = styled.button`
         cursor : pointer;
       }
 `
-const Board = styled.div``
+const Board = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+`
 
 function MainBoard() {
     const [name, setNames] = useState(null);
@@ -175,9 +180,9 @@ function MainBoard() {
     if (error) return <div>에러가 발생했습니다</div>;
     if (!name) return null;
     return (
-        <Board>
+        <div>
             <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem>&nbsp;<img src={NewIcon} /><SelectedItem>New</SelectedItem></Sorted>
-            <div>
+            <Board>
                 {name.map(content => (
                     <Container
                         key={content.id}>
@@ -204,13 +209,14 @@ function MainBoard() {
                         </Contents>
                     </Container>
                 ))}
-            </div>
-
-            <NextButton>Next Page&nbsp;
+                <NextButton>Next Page&nbsp;
                 <img src={Arrow} style={{ width: "15px", height: "15px" }} />
             </NextButton>
+            </Board>
 
-        </Board>
+            
+
+        </div>
     );
 }
 

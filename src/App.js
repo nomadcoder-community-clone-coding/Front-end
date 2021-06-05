@@ -53,7 +53,7 @@ const Card3 = styled.div`
     align-items: center;
     flex-direction: column;
     height:40px;
-    margin-top: 30px;
+    margin-top: 65px;
     margin-right: 70px;
 `
 
