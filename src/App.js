@@ -63,7 +63,7 @@ const WriteButton = styled.button`
   border: none;
   outline: none;
   background-color: #3B82F6;
-  &: hover {
+  &:hover {
     cursor : pointer;
   }
 `
@@ -71,7 +71,6 @@ const WriteButton = styled.button`
 function App() {
   return (
     <div>
-
       <div>
         <Header />
         <Title>Community</Title>
