@@ -84,7 +84,7 @@ export const Bottom = styled.div`
   
 `
 export const FooterLeft = styled.button`
-    margin-left: 55px;
+    margin-left: 15px;
     width: 500px;
     font-size : 16px;
     line-height: 24px;
