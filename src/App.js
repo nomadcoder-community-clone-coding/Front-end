@@ -3,6 +3,9 @@ import Header from './component/Header';
 import MainBoard from './component/MainBoard';
 import Category from './component/Category';
 import Footer from './component/Footer'
+import PopularIcon from './img/popular_icon.png';
+import NewIcon from './img/new_icon.png';
+import SearchIcon from './img/search_icon.png';
 
 const Title = styled.div`
   font-weight: 500;
@@ -20,7 +23,6 @@ const SubTitle = styled.div`
 const Contents = styled.div`
   display: flex;
   flex-direction: row;
-  padding-top: 100px;
 `
 
 const Card1 = styled.div`
@@ -28,7 +30,7 @@ const Card1 = styled.div`
     flex: 1;
     flex-direction: column;
     height:500px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 70px;
 `
 
@@ -39,9 +41,8 @@ const Card2 = styled.div`
   align-items: center;
   flex-direction: column;
   height:1000px;
-  margin: 30px 50px 30px;
+  margin: 20px 50px 20px;
 `
-
 
 const Card3 = styled.div`
     background-color: #3B82F6;
@@ -53,7 +54,7 @@ const Card3 = styled.div`
     align-items: center;
     flex-direction: column;
     height:40px;
-    margin-top: 65px;
+    margin-top: 20px;
     margin-right: 70px;
 `
 
@@ -67,7 +68,50 @@ const WriteButton = styled.button`
     cursor : pointer;
   }
 `
+const Sorted = styled.div`
+    padding-top: 100px;
+    margin-left : 320px;
+    font : semibold;
+    font-size: 15px;
+    color : gray;
+`
+const DefaultItem = styled.button`
+    font : semibold;
+    font-size: 15px;
+    color: gray;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    &: hover {
+        cursor : pointer;
+    }
+`
 
+const SelectedItem = styled.button`
+    font : semibold;
+    font-size: 15px;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color : #3B82F6;
+    &: hover {
+        cursor : pointer;
+      }
+`
+
+const Search = styled.button`
+    display: inline-block;
+    margin-left : 320px;
+    font : semibold;
+    font-size: 15px;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    color : gray;
+    &: hover {
+        cursor : pointer;
+      }
+`
 function App() {
   return (
     <div>
@@ -76,6 +120,9 @@ function App() {
         <Title>Community</Title>
         <SubTitle>개발자 99% 커뮤니티에서 수다 떨어요!</SubTitle>
       </div>
+      <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem><img src={NewIcon} /><SelectedItem>New</SelectedItem>
+        <Search><img src={SearchIcon} /> Search</Search>
+      </Sorted>
       <Contents>
         <Card1><Category /></Card1>
         <Card2><MainBoard /></Card2>
