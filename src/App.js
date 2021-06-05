@@ -23,6 +23,7 @@ const SubTitle = styled.div`
 const Contents = styled.div`
   display: flex;
   flex-direction: row;
+  padding-top: 100px;
 `
 
 const Card1 = styled.div`
@@ -30,7 +31,7 @@ const Card1 = styled.div`
     flex: 1;
     flex-direction: column;
     height:500px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 70px;
 `
 
@@ -41,41 +42,43 @@ const Card2 = styled.div`
   align-items: center;
   flex-direction: column;
   height:1000px;
-  margin: 20px 50px 20px;
+  margin: 30px 50px 30px;
 `
 
-const Card3 = styled.div`
+
+const Card3 = styled.button`
     background-color: #3B82F6;
     border-radius: 7px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     flex: 1;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+    border: none;
+    outline: none;
     height:40px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-right: 70px;
+    &:hover {
+      cursor : pointer;
+    }
 `
 
-const WriteButton = styled.button`
-  font-size: 18px;
-  color: white;
-  border: none;
-  outline: none;
-  background-color: #3B82F6;
-  &:hover {
-    cursor : pointer;
-  }
-`
 const Sorted = styled.div`
-    padding-top: 100px;
-    margin-left : 320px;
+    display: flex;
+    flex : 2;
+    justify-content : flex-start;
+    
     font : semibold;
     font-size: 15px;
     color : gray;
 `
 const DefaultItem = styled.button`
+    display: flex;
+    justify-content : flex-start;
     font : semibold;
     font-size: 15px;
     color: gray;
@@ -86,8 +89,8 @@ const DefaultItem = styled.button`
         cursor : pointer;
     }
 `
-
 const SelectedItem = styled.button`
+    display: flex;
     font : semibold;
     font-size: 15px;
     background: transparent !important;
@@ -100,8 +103,9 @@ const SelectedItem = styled.button`
 `
 
 const Search = styled.button`
-    display: inline-block;
-    margin-left : 320px;
+    display: flex;
+    flex: 1;
+    margin-left : 400px;
     font : semibold;
     font-size: 15px;
     background: transparent !important;
@@ -113,6 +117,7 @@ const Search = styled.button`
       }
 `
 function App() {
+
   return (
     <div>
       <div>
@@ -120,13 +125,17 @@ function App() {
         <Title>Community</Title>
         <SubTitle>개발자 99% 커뮤니티에서 수다 떨어요!</SubTitle>
       </div>
-      <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem><img src={NewIcon} /><SelectedItem>New</SelectedItem>
-        <Search><img src={SearchIcon} /> Search</Search>
-      </Sorted>
+
       <Contents>
-        <Card1><Category /></Card1>
-        <Card2><MainBoard /></Card2>
-        <Card3><WriteButton>글쓰기</WriteButton></Card3>
+        <Card1>
+          <p></p><Category /></Card1>
+        <Card2>
+          <Sorted>Sort by:&emsp;<img src={PopularIcon} /><DefaultItem>Popular</DefaultItem><img src={NewIcon} /><SelectedItem>New</SelectedItem>
+            <Search><img src={SearchIcon} /> &ensp;Search</Search>
+          </Sorted>
+          <MainBoard />
+        </Card2>
+        <Card3>글쓰기</Card3>
       </Contents>
       <div>
       </div>
