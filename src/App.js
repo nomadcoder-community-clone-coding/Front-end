@@ -8,7 +8,8 @@ import NewIcon from './img/new_icon.png';
 import SearchIcon from './img/search_icon.png';
 
 const Title = styled.div`
-  font-weight: 500;
+  font : semibold;
+  font-weight: 1000;
   padding-top: 200px;
   font-size: 50px;
   text-align: center;
