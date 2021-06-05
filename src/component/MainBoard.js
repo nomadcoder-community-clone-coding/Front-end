@@ -33,6 +33,10 @@ const LikeBox = styled.div`
   margin-left: 25px;
   width:44px;
   height:44px;
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
+    }
 `
 
 const CategoryButton = styled.button`
@@ -50,12 +54,36 @@ const Details = styled.div`
   justify-content: space-evenly;
 `
 
+const DetailTitle = styled.h3`
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
+    }
+`
+
+const Writer = styled.button`
+    font: semibold;
+    font-weight: 600;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background: #F8F8F8;
+    &:hover {
+        cursor : pointer;
+        transition: 200ms ease-in;
+        }
+`
+
 const ProfilePhoto = styled.div`
   display: flex;
   flex: 1;
   justify-content:flex-end;
   align-items: center;
   margin-right: 25px;
+  &:hover {
+    cursor : pointer;
+    transition: 200ms ease-in;
+    }
 `
 
 
@@ -98,11 +126,11 @@ function MainBoard() {
                         <Contents>
                             <LikeBox><img src={UpIcon} />{content.likes}</LikeBox>
                             <Details>
-                                <h3 style={{ marginLeft: "30px", marginBottom: "0px"}}>
-                                    {content.title}</h3>
-                                <p style={{ marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
-                    <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
-                    &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon}></img> {content.commentNum}
+                                <DetailTitle style={{ marginLeft: "30px", marginBottom: "0px" }}>
+                                    {content.title}</DetailTitle>
+                                <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
+                    <CategoryButton>#{content.category}</CategoryButton> by <Writer>{content.writer}</Writer>
+                    &emsp; • {content.createdDate} &nbsp; <img src={CommentIcon} />&nbsp;{content.commentNum}
                                 </p>
                             </Details>
                             <ProfilePhoto>
