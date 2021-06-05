@@ -10,7 +10,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width:707px;
+    width:100%;
     height:115px;
     margin-bottom: 15px;
 `
@@ -18,6 +18,7 @@ const Container = styled.div`
 const Contents = styled.div`
  display: flex;
  flex-direction: row;
+ align-items: center;
 `
 
 const LikeBox = styled.div`
@@ -29,7 +30,6 @@ const LikeBox = styled.div`
   align-items: center;
   flex-direction: column;
   margin-left: 25px;
-  margin-top: 28px;
   width:44px;
   height:44px;
 `
@@ -40,6 +40,21 @@ const CategoryButton = styled.button`
   border: none;
   outline: none;
   color: white;
+`
+
+const Details = styled.div`
+  display: flex;
+  flex: 5;
+  flex-direction: column;
+  justify-content: space-evenly;
+`
+
+const ProfilePhoto = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content:flex-end;
+  align-items: center;
+  margin-right: 25px;
 `
 
 
@@ -80,14 +95,22 @@ function MainBoard() {
                         key={content.id}>
                         <Contents>
                             <LikeBox><img src={UpIcon} />{content.likes}</LikeBox>
-                            <div>
-                                <h3 style={{ marginLeft: "30px" }}>
+                            <Details>
+                                <h3 style={{ marginLeft: "30px", marginBottom: "0px"}}>
                                     {content.title}</h3>
-                                <p style={{ marginLeft: "30px", fontSize: "16px" }}>in&nbsp;
+                                <p style={{ marginLeft: "30px", fontSize: "16px"}}>in&nbsp;
                     <CategoryButton>#{content.category}</CategoryButton> by {content.writer}
                     &emsp; * {content.createdDate} &nbsp;* {content.commentNum}
                                 </p>
-                            </div>
+                            </Details>
+                            <ProfilePhoto>
+                            <img 
+                                src={content.writerPhoto} 
+                                style={{
+                                    borderRadius:"50%", 
+                                    width: "60px",
+                                    height: "60px"}}/>
+                            </ProfilePhoto>
                         </Contents>
                     </Container>
                 ))}
